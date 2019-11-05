@@ -19,8 +19,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "migrate": "DATABASE_node-pg-migrate",
-    "build-server": "npm install && npm migrate up && npm run start"
+    "migrate": "node-pg-migrate",
+    "build-server": "npm install && npm run start"
   },
   "repository": {
     "type": "git",
