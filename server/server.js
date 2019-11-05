@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, '../client/build')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.listen(process.env.PORT || 5000, () => console.log(`Server running on port 5000`));
+app.listen(process.env.PORT || 5000);
 
 app.use('/', function (req, res, next) {
   // Website you wish to allow to connect
