@@ -3,7 +3,7 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const port = process.env.PORT || 5000;
+
 const projectApi = require('./routes/project')
 const taksApi = require('./routes/task')
 const authApi = require('./routes/auth')
@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, '../client/build')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.listen(port, () => console.log(`Server running on port - ${port}`));
+app.listen(process.env.PORT || 5000, () => console.log(`Server running on port 5000`));
 
 app.use('/', function (req, res, next) {
   // Website you wish to allow to connect
