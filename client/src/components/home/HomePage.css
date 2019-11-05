@@ -1,0 +1,151 @@
+.page_container {
+  /* margin: 24px; */
+  height: 100%;
+  display: flex;
+}
+
+.controls{
+  display: flex;
+  cursor: pointer;
+}
+
+.header_padding{
+  padding:24px;
+}
+
+.custom_checkbox{
+  display: flex;
+  position:relative;
+  margin-right: 8px;
+}
+
+.check{
+  position: absolute;
+  padding: 4px 0px 2px 2px;
+}
+
+.new_input{
+  opacity: 0.5;
+  color: #ccd4dc;
+  font-family: Raleway;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: #323337;
+  border-color: #323337;
+  border: none;
+  outline: none;
+}
+
+.add_text{
+  margin-right: 8px;
+  height: 19px;	
+  width: 94px;	
+  color: #42C8B5;	
+  font-family: Raleway;	
+  font-size: 16px;	
+  font-weight: bold;	
+  line-height: 19px;	
+  text-align: right;
+}
+
+.item_name{
+  color: #CCD4DC;	
+ font-family: Raleway;	
+ font-size: 15px;	
+ font-weight: 500;	
+ line-height: 22px;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.selected{
+  border-radius: 10px;	
+  border: 1px solid rgba(204,212,220,0.3);
+  background-color: #323337;
+  box-sizing: border-box;
+}
+
+.new_project_name_width{
+  width: 80%;
+}
+
+.single_item{
+  box-sizing: border-box;
+  padding: 0px 12px 0px 12px;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  height: 73px;
+}
+
+.single_item:hover{
+  border-radius: 10px;	
+  border: 1px solid rgba(204,212,220,0.3);
+  background-color: #323337;
+  box-sizing: border-box;
+}
+
+.items{
+  padding:5px;
+}
+
+.crossed{
+  height: 0.8px;
+  width: 320px;
+  border-bottom: 0.4px solid black;
+  position: absolute;
+  top: 50%;
+}
+
+.item_info{
+  display:flex;
+  justify-content: space-between;
+  width:100%;
+}
+
+.item_innerContainer{
+  width: 100%;
+  position: relative;
+  align-items: center;
+}
+
+.separator{
+  height: 4px;
+  width: 100%;
+  border-bottom: 1px solid #2A2B2E;
+}
+
+.item_wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.turquoise-new{
+  color:turquoise;
+}
+
+.dark-new{
+  color:#FF5252;
+}
+
+.wrapper::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: rgb(110, 107, 107);
+}
+.wrapper::-webkit-scrollbar
+{
+	width: 12px;
+}
+
+.wrapper::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}

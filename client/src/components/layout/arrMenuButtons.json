@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "path": "",
+    "text": "",
+    "divClass": "btn menu",
+    "picName": "menu"
+  },
+  {
+    "id": 2,
+    "path": "HOME",
+    "text": "Home",
+    "divClass": "btn",
+    "picName": "home"
+  },
+  {
+    "id": 3,
+    "path": "ABOUT",
+    "text": "About",
+    "divClass": "btn",
+    "picName": "about"
+  },
+  {
+    "id": 4,
+    "path": "SETTINGS",
+    "text": "Settings",
+    "divClass": "btn",
+    "picName": "settings"
+  }
+]

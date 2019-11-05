@@ -1,0 +1,77 @@
+{
+  "arrProjects": [
+    {
+      "id": 1,
+      "name":"Project name1",
+      "date":"12.08.2019",
+      "isDone": false
+    },
+    {
+      "id": 2,
+      "name":"Project name2",
+      "date":"05.1.2019",
+      "isDone": true
+    },
+    {
+      "id": 3,
+      "name":"Project name3",
+      "date":"12.08.2019",
+      "isDone": false
+    },
+    {
+      "id": 4,
+      "name":"Project name4",
+      "date":"24.01.2019",
+      "isDone": false
+    },
+    {
+      "id": 5,
+      "name":"Project name5",
+      "date":"29.10.2019",
+      "isDone": true
+    },
+    {
+      "id": 6,
+      "name":"Project name6",
+      "date":"12.03.2019",
+      "isDone": false
+    }
+  ],
+  "arrTasks" : [
+    {
+      "id": 1,
+      "description": "Task description 1",
+      "isDone": true
+    },
+    {
+      "id": 2,
+      "description": "Task description 1",
+      "isDone": false
+    },
+    {
+      "id": 3,
+      "description": "Task description 1",
+      "isDone": true
+    },
+    {
+      "id": 4,
+      "description": "Task description 1",
+      "isDone": false
+    },
+    {
+      "id": 5,
+      "description": "Task description 1",
+      "isDone": true
+    },
+    {
+      "id": 6,
+      "description": "Task description 1",
+      "isDone": false
+    },
+    {
+      "id": 7,
+      "description": "Task description 1",
+      "isDone": false
+    }
+  ]
+}

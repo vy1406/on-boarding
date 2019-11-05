@@ -1,0 +1,5 @@
+.projects{
+  height: calc(100% - 24px - 24px - 81px); /* container - marginTop - marginBottom - header */
+  width: 400px;
+}
+

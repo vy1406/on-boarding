@@ -1,0 +1,14 @@
+{
+  "name": "onboarding-separated",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build-client && npm run build-server", 
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-server": "cd server && npm run build-server",
+    "build-client": "cd client && npm run build-client"
+  },
+  "author": "",
+  "license": "ISC"
+}

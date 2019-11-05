@@ -1,0 +1,81 @@
+.themes_header{
+  display: flex;
+  justify-content: space-between;
+  padding: 49px 24px 0px 27px;
+}
+
+.theme_title{
+  font-size: 20px;	
+  font-weight: 600;	
+  line-height: 22px;
+}
+
+.controls{
+  display:flex;
+  align-items: center;
+}
+
+.cancel_control{
+  margin-right: 10px;
+  height: 19px;	
+  width: 53px;	
+  font-family: Raleway;	
+  font-size: 16px;	
+  font-weight: 600;	
+  line-height: 19px;	
+  text-align: center;
+}
+
+.pick_theme_title{
+  margin-left: 27px;
+  height: 24px;	
+  width: 114px;	
+  color: #CCD4DC;	
+  font-family: Raleway;	
+  font-size: 15px;
+}
+
+.rectangle{
+  height: 100px;	
+  width: 100px;	
+  border-radius: 10px;
+}
+
+.rectangle_text{
+  height: 24px;	
+  width: 97px;	
+  color: #FFFFFF;	
+  font-family: Raleway;	
+  font-size: 15px;	
+  font-weight: 500;
+  line-height: 24px;	
+  text-align: center;
+}
+
+.themes{
+  display: flex;
+  margin-left: 27px;
+  margin-top: 56px;
+}
+
+.theme_option{
+  margin-right:40px;
+}
+
+/* .rectangle:hover{
+  border: 2px solid red;
+  box-sizing: border-box;
+} */
+
+.dark_theme{
+  background-color: #2A2B2E;
+}
+
+.turquoise_theme{
+  background-color: #42C8B5;
+}
+
+.selected_theme{
+  border: 2px solid red;
+  box-sizing: border-box;
+}

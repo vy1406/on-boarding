@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "dark",
+    "isSelected": false,
+    "text": "Dark (Default)"
+  },
+  {
+    "id": 2,
+    "name": "turquoise",
+    "isSelected": false,
+    "text": "Turquoise"
+  }
+]

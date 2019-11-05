@@ -1,0 +1,118 @@
+﻿CREATE TABLE public.user
+(
+  id serial,
+  username character varying(255),
+  password character varying(255),
+  CONSTRAINT user_pkey PRIMARY KEY (id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.user
+  OWNER TO postgres;
+
+CREATE TABLE public.project
+(
+  id serial,
+  user_id integer,
+  name character varying(255),
+  isdone BOOLEAN DEFAULT FALSE,
+  date varchar(255) not null,
+  CONSTRAINT project_pkey PRIMARY KEY (id),
+  CONSTRAINT project_user_id_fkey FOREIGN KEY (user_id)
+      REFERENCES public.user (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.project
+  OWNER TO postgres;
+
+CREATE TABLE public.task
+(
+  id serial,
+  description character varying(255) NOT NULL,
+  project_id integer NOT NULL,
+  isdone BOOLEAN DEFAULT FALSE,
+  CONSTRAINT task_pkey PRIMARY KEY (id),
+  CONSTRAINT task_project_id_fkey FOREIGN KEY (project_id)
+      REFERENCES public.project (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.task
+  OWNER TO postgres;
+
+
+INSERT INTO public.user(
+             username, password)
+    VALUES ( 'vladimiry@spectory.com', 1234);
+
+INSERT INTO public.user(
+             username, password)
+    VALUES ( 'travalex@spectory.com', 1234);
+
+INSERT INTO public.user(
+             username, password)
+    VALUES ( 'bonda@spectory.com', 1234);
+
+
+INSERT INTO public.project(
+             user_id, name, isdone, date)
+    VALUES ( 1, 'project1', false, '12-10-1998');
+INSERT INTO public.project(
+             user_id, name, isdone, date)
+    VALUES ( 1, 'project2', false, '12-10-1998');
+INSERT INTO public.project(
+             user_id, name, isdone, date)
+    VALUES ( 1, 'project3', true, '16-02-1976');
+INSERT INTO public.project(
+             user_id, name, isdone, date)
+    VALUES ( 1, 'project4', false, '1-1-2001');
+INSERT INTO public.project(
+             user_id, name, isdone, date)
+    VALUES ( 1, 'project5', false, '15-06-1968');
+INSERT INTO public.project(
+             user_id, name, isdone, date)
+    VALUES ( 1, 'project6', true, '06-06-1906');
+INSERT INTO public.project(
+             user_id, name, isdone, date)
+    VALUES ( 1, 'project7', true, '11-07-2016');
+
+
+INSERT INTO public.task(
+             description, project_id, isdone)
+    VALUES ( 'task description 1', 1, false);
+
+INSERT INTO public.task(
+             description, project_id, isdone)
+    VALUES ( 'task description 2', 1, false);
+
+
+INSERT INTO public.task(
+             description, project_id, isdone)
+    VALUES ( 'task description 3', 1, true);
+
+
+INSERT INTO public.task(
+             description, project_id, isdone)
+    VALUES ( 'task description 4', 1, false);
+
+
+INSERT INTO public.task(
+             description, project_id, isdone)
+    VALUES ( 'task description 5', 1, false);
+
+
+INSERT INTO public.task(
+             description, project_id, isdone)
+    VALUES ( 'task description 6', 1, false);
+
+
+INSERT INTO public.task(
+             description, project_id, isdone)
+    VALUES ( 'task description 7', 1, true);
+

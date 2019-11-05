@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="12px" viewBox="0 0 18 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 57.1 (101010) - https://sketch.com -->
+    <title>63E61150-F4C0-4BBF-B982-577BCF17A5B7</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2_Home_project_selected" transform="translate(-31.000000, -34.000000)">
+            <g id="side_menu">
+                <g id="icon/menu" transform="translate(28.000000, 28.000000)">
+                    <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                    <path d="M3,18 L9,18 L9,16 L3,16 L3,18 Z M3,6 L3,8 L21,8 L21,6 L3,6 Z M3,13 L15,13 L15,11 L3,11 L3,13 Z" id="Shape" fill="#CCD4DC" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

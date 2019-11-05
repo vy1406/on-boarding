@@ -1,0 +1,30 @@
+export const SET_LOGIN_INPUT = "SET_LOGIN_INPUT"
+export const CHANGE_REDUX_PATH = "CHANGE_REDUX_PATH"
+
+export const PATHS = {
+  HOME: "HOME",
+  ABOUT: "ABOUT",
+  SETTINGS: "SETTINGS",
+  LOGOUT: "LOGOUT"
+}
+
+export const SET_CURRENT_MENU_BUTTON = "SET_CURRENT_MENU_BUTTON"
+export const SET_IS_AUTHENTICATED = "SET_IS_AUTHENTICATED"
+export const SET_LOGGED_USER = "SET_LOGGED_USER"
+
+export const OPEN_MODAL = "OPEN_MODAL"
+export const FILL_MODAL_INFO = "FILL_MODAL_INFO"
+export const SELECT_THEME = "SELECT_THEME"
+export const SET_THEME = "SET_THEME"
+
+export const CURRENT_PROJECT = "CURRENT_PROJECT"
+
+export const PROJECT_ADD = "PROJECT_ADD";
+export const PROJECT_DELETE = "PROJECT_DELETE";
+export const PROJECT_UPDATE = "PROJECT_UPDATE";
+export const PROJECTS_FETCH = "PROJECTS_FETCH";
+
+export const TASK_ADD = "TASK_ADD";
+export const TASK_DELETE = "TASK_DELETE";
+export const TASK_UPDATE = "TASK_UPDATE";
+export const TASKS_FETCH = "TASKS_FETCH";

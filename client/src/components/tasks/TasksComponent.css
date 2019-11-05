@@ -1,0 +1,12 @@
+.tasks {
+  width: calc(100% - 400px - 48px);
+  margin-left: 0px; 
+}
+
+.text_crossed{
+  text-decoration: line-through;
+}
+
+.task{
+  height: 48px;
+}
