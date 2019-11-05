@@ -31,7 +31,8 @@ class LoginPage extends React.Component<LoginProps, LoginState> {
 
   signIn = () => {
     const params = { username: this.state.usernameInput, password: this.state.passwordInput }
-    axios.post("http://localhost:5000/auth/login", params)
+    // axios.post("http://localhost:5000/auth/login", params)
+    axios.post("/auth/login", params)
     .then(res => {
         this.props.setLoggedUser(res.data.user)
         this.props.setIsAuthenticated(res.data.isAuthenticated)

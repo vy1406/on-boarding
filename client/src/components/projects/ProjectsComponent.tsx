@@ -68,7 +68,8 @@ class ProjectsComponent extends React.Component<MainProps, ProjectState> {
 
   componentDidMount() {
 
-    axios.get("http://localhost:5000/project?user_id=" + this.props.loggedUser.user_id)
+    // axios.get("http://localhost:5000/project?user_id=" + this.props.loggedUser.user_id)
+    axios.get("/project?user_id=" + this.props.loggedUser.user_id)
       .then(res => {
         let sorted = res.data.sort((a, b) => a.id - b.id)
         // sorted = sorted.sort((a, b) => (a.isdone === b.isdone) ? 0 : a.isdone ? 1 : -1);
@@ -76,7 +77,8 @@ class ProjectsComponent extends React.Component<MainProps, ProjectState> {
         
         if (res.data.length > 0) { // project array is not empty
           this.props.setCurrentProject(res.data[0])
-          axios.get("http://localhost:5000/task?project_id=" + res.data[0].id)
+          // axios.get("http://localhost:5000/task?project_id=" + res.data[0].id)
+          axios.get("/task?project_id=" + res.data[0].id)
             .then(res => {
               let sorted = res.data.sort((a, b) => a.id - b.id)
               this.props.fetchTasks(sorted)
@@ -99,7 +101,8 @@ class ProjectsComponent extends React.Component<MainProps, ProjectState> {
 
     const params = { project_id, user_id: this.props.loggedUser.user_id }
 
-    axios.put("http://localhost:5000/project/updatedone", params)
+    // axios.put("http://localhost:5000/project/updatedone", params)
+    axios.put("/project/updatedone", params)
       .then(res => {
         let sorted = res.data.sort((a, b) => a.id - b.id)
         // sorted = sorted.sort((a, b) => (a.isdone === b.isdone) ? 0 : a.isdone ? 1 : -1);
@@ -114,7 +117,8 @@ class ProjectsComponent extends React.Component<MainProps, ProjectState> {
       const date = `${d.getDate()}.${d.getMonth() + 1}.${d.getFullYear()}`;
       const params = { name: e.target.value, user_id: this.props.loggedUser.user_id, date }
 
-      axios.post("http://localhost:5000/project", params)
+      // axios.post("http://localhost:5000/project", params)
+      axios.post("/project", params)
         .then(res => {
           let sorted = res.data.sort((a, b) => a.id - b.id)
           // sorted = sorted.sort((a, b) => (a.isdone === b.isdone) ? 0 : a.isdone ? 1 : -1);
@@ -131,20 +135,8 @@ class ProjectsComponent extends React.Component<MainProps, ProjectState> {
     const d = new Date()
     let outPut = `${arrDate[0]}.${arrDate[1]}.${arrDate[2]}`
 
-    // console.log(d);
-    // console.log(outPut);
     if (d.getDate() == arrDate[0] && d.getMonth() == arrDate[1] - 1 && d.getFullYear() == arrDate[2])
       outPut = "Today"
-    //   console.log("TODAY !");
-
-    // if ( d.getDate() === arrDate[0])
-    //   console.log("day ok");
-    // if ( d.getMonth() === arrDate[1] - 1)
-    //   console.log("month ok");
-
-    //   console.log(d.getFullYear() + " | " + arrDate[2]);
-    // if ( d.getFullYear() === arrDate[2])
-    //   console.log(d.getFullYear() + " | " + arrDate[2]);
 
     return (outPut)
   }
@@ -196,7 +188,8 @@ class ProjectsComponent extends React.Component<MainProps, ProjectState> {
       project_id,
       user_id: this.props.loggedUser.user_id
     }
-    axios.delete("http://localhost:5000/project", { data: params })
+    // axios.delete("http://localhost:5000/project", { data: params })
+    axios.delete("/project", { data: params })
       .then(res => {
         let sorted = res.data.sort((a, b) => a.id - b.id)
         // sorted = sorted.sort((a, b) => (a.isdone === b.isdone) ? 0 : a.isdone ? 1 : -1);
@@ -206,7 +199,8 @@ class ProjectsComponent extends React.Component<MainProps, ProjectState> {
 
   setCurrentProject = (project: any) => {
     this.props.setCurrentProject(project)
-    axios.get("http://localhost:5000/task?project_id=" + project.id)
+    // axios.get("http://localhost:5000/task?project_id=" + project.id)
+    axios.get("/task?project_id=" + project.id)
       .then(res => {
         const sorted = res.data.sort((a, b) => a.id - b.id)
         this.props.fetchTasks(sorted)

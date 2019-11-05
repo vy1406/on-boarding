@@ -101,7 +101,8 @@ class TasksComponent extends React.Component<MainProps, TaskState> {
       project_id: this.props.currentProject.id
     }
 
-    axios.put("http://localhost:5000/task/updatedone", params)
+    // axios.put("http://localhost:5000/task/updatedone", params)
+    axios.put("/task/updatedone", params)
       .then(res => {
         const sorted = res.data.sort((a, b) => a.id - b.id)
         this.props.fetchTasks(sorted)
@@ -126,7 +127,8 @@ class TasksComponent extends React.Component<MainProps, TaskState> {
     if (e.key === "Enter") {
       const params = { project_id: this.props.currentProject.id, description: e.target.value }
 
-      axios.post("http://localhost:5000/task", params)
+      // axios.post("http://localhost:5000/task", params)
+      axios.post("/task", params)
         .then(res => {
           const sorted = res.data.sort((a, b) => a.id - b.id)
           this.props.fetchTasks(sorted)
@@ -170,7 +172,8 @@ class TasksComponent extends React.Component<MainProps, TaskState> {
         user_id: this.props.loggedUser.user_id
       }
 
-      axios.put("http://localhost:5000/project/updatename", params)
+      // axios.put("http://localhost:5000/project/updatename", params)
+      axios.put("/project/updatename", params)
         .then(res => {
           let sorted = res.data.sort((a, b) => a.id - b.id)
           // sorted = sorted.sort((a, b) => (a.isdone === b.isdone) ? 0 : a.isdone ? 1 : -1);
@@ -179,7 +182,8 @@ class TasksComponent extends React.Component<MainProps, TaskState> {
           const curProject = this.findCurrentUpdatedProject(sorted)
           this.props.setCurrentProject(curProject)
           if (this.props.currentProject.id) { // project array is not empty
-            axios.get("http://localhost:5000/task?project_id=" + this.props.currentProject.id)
+            // axios.get("http://localhost:5000/task?project_id=" + this.props.currentProject.id)
+            axios.get("/task?project_id=" + this.props.currentProject.id)
               .then(res => {
                 const sorted = res.data.sort((a, b) => a.id - b.id)
                 this.props.fetchTasks(sorted)
@@ -231,7 +235,8 @@ class TasksComponent extends React.Component<MainProps, TaskState> {
       project_id: this.props.currentProject.id
     }
 
-    axios.delete("http://localhost:5000/task", { data: params })
+    // axios.delete("http://localhost:5000/task", { data: params })
+    axios.delete("/task", { data: params })
       .then(res => {
         const sorted = res.data.sort((a, b) => a.id - b.id)
         this.props.fetchTasks(sorted)
